@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: "Universal";
-  src: url("src/assets/fonts/Universal Serif.ttf")
+  src: url("./assets/fonts/Universal\ Serif.ttf")
 }
 
 *, *::before, *::after {
