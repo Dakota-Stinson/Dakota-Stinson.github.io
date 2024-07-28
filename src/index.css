@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.root, :root {
+  --fontColor: 255, 255, 255;
+  --background: 42, 86, 69;
+  --primary: 0, 255, 203;
+  --secondary: 134, 206, 197;
+  --secondaryDark: 98, 163, 156;
+  --accent:  243, 208, 68;
+
+  /* Fiddle with this number to change the image entry's sizes! */
+  --imageGridImageSize: 150px;
+  --imageGridTextSize: 18px;
+  --imageGridEntrySize: calc(var(--imageGridImageSize) + var(--imageGridTextSize));
+}
+
+@font-face {
+  font-family: "Universal";
+  src: url("src/assets/fonts/Universal Serif.ttf")
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Cambria, "Times New Roman", Times, serif;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-y: hidden;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background: initial;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 100vh;
+    border: 1px solid auto;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgb(114, 114, 114);
+  }
+
+  @-moz-document url-prefix() {
+    .scrollbar {       
+      scrollbar-color: initial initial;
+      scrollbar-width: thin;
+    }
+
+    .scrollbar::hover {
+      scrollbar-color: dark auto;
+      scrollbar-width: thin;
+    }
+  }
+}
