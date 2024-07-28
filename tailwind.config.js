@@ -38,7 +38,7 @@ export default {
         "image-description": "var(--imageGridTextSize)"
       },
       backgroundImage: { 
-        'hero-banner': "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./src/assets/images/map-banner.png')" 
+        'hero-banner': "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/images/map-banner.png')" 
       },
       fontFamily: {
         'universal': ['Universal', "serif"]
