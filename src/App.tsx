@@ -26,7 +26,7 @@ import { PageTitle } from "./components/ui/pageTitle";
 function App() {
   return (
     <div className="h-[100vh] overflow-y-scroll scrollbar bg-background flex flex-col">
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <NavBar />
         <Routes>
           {["home", "*"].map((path) => (
